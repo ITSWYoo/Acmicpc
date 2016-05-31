@@ -46,7 +46,7 @@ public class Sort11650 {
 		Arrays.sort(p);
 		for(int i =0 ; i<p.length; i++)
 		{
-			System.out.println(p[i].x+" "+p[i].y);
+			System.out.println(p[i].getX()+" "+p[i].getY());
 		}
 	}
 	public static void main(String args[])
