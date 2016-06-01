@@ -9,21 +9,23 @@ public class Sort11652 {
 	private void mySort()
 	{
 		int n = sc.nextInt();
-		int card[] = new int[n];
+		long card[] = new long[n];
 		
 		for(int i= 0 ; i<n; i++)
 		{
-			card[i] = sc.nextInt();
+			card[i] = sc.nextLong();
 		}
 		Arrays.sort(card);
-		int maxCnt = 1;
-		long ans = card[0];
+		long maxValue= card[0];
+		
+		int maxCnt = 0;
 		int cnt = 1;
+		
 		for(int i = 1 ; i<card.length; i++)
 		{
 			if(card[i]==card[i-1])
 			{
-				cnt+=1;
+				cnt++;
 			}
 			else
 			{
@@ -32,10 +34,11 @@ public class Sort11652 {
 			if(maxCnt < cnt)
 			{
 				maxCnt = cnt;
-				ans = card[i];
+				maxValue = card[i];
 			}
 		}
-		System.out.println(ans);
+		System.out.println(maxValue);
+	
 	}
 	public static void main(String args[])
 	{
