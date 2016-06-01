@@ -20,7 +20,7 @@ public class Math1978 {
 			return 0;
 		else
 		{
-			for(int i =2; i*i<a; i++)
+			for(int i =2; i*i<=a; i++)
 			{
 				if(a%i ==0)
 					return 0;
