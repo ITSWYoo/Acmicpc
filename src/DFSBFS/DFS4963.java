@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
  * Created by Yoo on 2016-10-05.
  */
 //https://www.acmicpc.net/problem/4963
-public class DP4963 {
+public class DFS4963 {
     static int map[][];
     static int w,h;
     static int dy[] = {0,-1,-1,-1,0,1,1,1};

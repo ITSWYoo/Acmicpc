@@ -28,6 +28,7 @@ public class DP2293 {
             for(int j=money[i]; j<=k; j++)
             {
                 dp[j] += dp[j-money[i]];
+
             }
         }
         System.out.println(dp[k]);

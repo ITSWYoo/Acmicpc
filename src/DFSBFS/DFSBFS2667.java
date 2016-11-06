@@ -30,34 +30,39 @@ public class DFSBFS2667 {
             }
         }
         int result = 0;
-
-        for (int i = 1; i <= num; i++) {
-            for (int j = 1; j <= num; j++) {
-                if (map[i][j] != -1 && map[i][j] == 1) {
-                    home = 1;
+        for(int i =1; i<=num; i++)
+        {
+            for(int j =1; j<=num; j++)
+            {
+                if(map[i][j]==1) {
+                    home=1;
+                    result++;
                     dfs(i, j);
-                    result++; //단지수
                     danNum.add(home);
                 }
             }
         }
         System.out.println(result);
         Collections.sort(danNum);
-        for (int n : danNum) {
+        for(int n:danNum)
+        {
             System.out.println(n);
         }
-    }
 
-    public static void dfs(int y, int x) {
-        int my, mx;
-        map[y][x] = -1; //방문
-        for (int i = 0; i < 4; i++) {
-            my = y + dy[i];
-            mx = x + dx[i];
-            if (my < 1 || my > num || mx < 1 || mx > num) continue;
-            if (map[my][mx] == 1) {
+    }
+    static void dfs(int y, int x)
+    {
+        map[y][x]=0;
+        for(int i =0; i<4; i++)
+        {
+            int my,mx;
+            my = y+dy[i];
+            mx = x+dx[i];
+            if(my<1 || mx<1 || my>num || mx>num) continue;
+            if(map[my][mx] ==1)
+            {
+                dfs(my,mx);
                 home++;
-                dfs(my, mx);
             }
         }
     }
